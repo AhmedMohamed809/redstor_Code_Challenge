@@ -23,6 +23,11 @@ class Program
           { 'C', 30 },
           { 'D', 25 }
       };
-        
+
+      Dictionary<char, Tuple<int, int>> specialPrices = new Dictionary<char, Tuple<int, int>>
+        {
+          { 'A', Tuple.Create(3, 150) },
+          { 'B', Tuple.Create(2, 45) }
+        };
     }
 }
