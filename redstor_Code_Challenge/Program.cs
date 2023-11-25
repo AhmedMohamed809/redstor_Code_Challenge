@@ -37,6 +37,39 @@
         }
        
     }
+    public int Total()
+    {
+        int total = 0;
+        foreach(var item in itemCounts.Keys)
+        {
+            /*
+             *                 Condition 1 
+             *  checks if there is a special pricing rule defined for the current item (item). 
+             * 
+             *                  Condition 2
+             *  checks if the quantity of the current item scanned (itemCounts[item]) is greater than or equal
+             *  to the minimum quantity required for the special pricing rule (specialPrices[item].Item1).
+             */
+            if (specialPrices.ContainsKey(item) && itemCounts[item] >= specialPrices[item].Item1) 
+            {
+                //calculates how many times the minimum quantity for a special set can fit into the total quantity of the item scanned.
+                int specialSets = itemCounts[item] / specialPrices[item].Item1;
+                total +=  specialSets * specialPrices[item].Item2;
+
+                // gives the remainder of the division 
+                int remainingItem = itemCounts[item] % specialPrices[item].Item1;
+                total += remainingItem * prices[item];
+
+            }
+            else
+            {
+                total += itemCounts[item] * prices[item];
+            }
+        }
+
+
+        return total;
+    }
   
 }
 
@@ -61,7 +94,15 @@ class Program
 
         Checkout checkout=new Checkout(prices, specialPrices);
 
+        checkout.Scan('B');
         checkout.Scan('A');
+        checkout.Scan('B');
+      
        
+
+        int total = checkout.Total();
+
+        Console.WriteLine($"Total Price: {total}");
+
     }
 }
