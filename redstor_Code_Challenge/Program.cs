@@ -25,14 +25,16 @@
 
             return; // to stop the program 
         }
-        else if(!itemCounts.ContainsKey(item))
+        //If the item is not in the dictionary 
+        else if (!itemCounts.ContainsKey(item))
         {
-
+            //count is set to 1.
             itemCounts[item] = 1;
          
         
         }else
         {
+           // If the item is already in the dictionary, meaning it has been scanned before, the count for that item is incremented by 1
             itemCounts[item]++;
         }
        
@@ -94,11 +96,12 @@ class Program
 
         Checkout checkout=new Checkout(prices, specialPrices);
 
-        checkout.Scan('B');
         checkout.Scan('A');
-        checkout.Scan('B');
-      
-       
+        checkout.Scan('A');
+        checkout.Scan('K');
+
+
+
 
         int total = checkout.Total();
 
