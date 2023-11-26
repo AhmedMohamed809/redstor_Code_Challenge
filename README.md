@@ -23,6 +23,7 @@ Items can be scanned in any order, so if we scan a B, an A, then another B, weâ€
 the offer for two Bâ€™s and price them at 45, giving a total price of 105. Because our store
 changes its pricing frequently, we need to be able to pass in a set of pricing rules each time
 we begin handling a checkout transaction.</p>
+<p>
 You may use any language and technologies to design and implement your solution. The
 interface for the checkout should look similar to the following pseudocode:
 checkout = new Checkout(pricingRules)
@@ -32,3 +33,8 @@ checkout.Scan(item)
 price = checkout.Total
 Here are some example totals for sequences of items, which you may find useful for testing
 your solution.
+</p>
+# Test  Unit 
+<b> I add MSTest Unit Test Project to the Solution Explorer as new project , And add the  project reference    </b>
+<p> I used Microsoft documentation to learn about MSTest. </p>
+<p>This is thie test reference from Microsoft learn <a>https://learn.microsoft.com/en-us/visualstudio/test/walkthrough-creating-and-running-unit-tests-for-managed-code?view=vs-2022</a> </p>
