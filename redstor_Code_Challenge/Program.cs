@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Subermarket
+namespace Supermarket
 {
     public class Checkout
     {
