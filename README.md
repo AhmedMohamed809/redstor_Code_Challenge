@@ -14,7 +14,7 @@ Implement the code for a supermarket checkout that calculates the total price of
 
 ## Unit Test 
 
-I add MSTest Unit Test Project to the Solution Explorer as new project , And add the project reference
+I add MSTest Unit Test Project to the Solution Explore as new project , And add the project reference
 
 I used Microsoft documentation to learn about
 [MSTest](https://learn.microsoft.com/en-us/visualstudio/test/walkthrough-creating-and-running-unit-tests-for-managed-code?view=vs-2022) . 
