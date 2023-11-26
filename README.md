@@ -8,7 +8,7 @@ Implement the code for a supermarket checkout that calculates the total price of
 
  For example, item A might cost 60 individually, but if you buy three A’s then they’ll cost you 150. This week’s prices are as follows:
 ## Diagramming 
-![Subermarket](https://github.com/AhmedMohamed809/redstor_Code_Challenge/assets/105979851/c1ce20fb-0a30-4c92-8831-a17cf83f5c26)
+![Subermarket](Subermarket.jpg)
 
 
 ## language
